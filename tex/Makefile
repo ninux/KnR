@@ -1,6 +1,8 @@
 MAINFILE = documentation
 
 all:
+	pdflatex $(MAINFILE).tex
+	bibtex $(MAINFILE).aux
 	for i in {1..3}; do \
 		pdflatex $(MAINFILE).tex; \
 	done
