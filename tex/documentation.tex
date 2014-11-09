@@ -1,6 +1,6 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[latin1]{inputenc}
-\usepackage[ngerman]{babel}
+\usepackage[english]{babel}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -8,18 +8,26 @@
 \usepackage{lipsum}
 \usepackage{listings}
 \usepackage{color}
+\usepackage{cite}
+\usepackage{apacite}
 
 \author{Ervin Mazlagi\'c}
 \date{\today}
-\title{K\&R - Exercise Solutions}
+\title{K\&R - Exercises \\ \footnotesize{Personal Solution Catalogue}}
 
 \lstset{
-	language=C,
+	language=[ANSI]C,
 	basicstyle=\ttfamily,
 	numbers=left,
         numberstyle=\tiny,
         numbersep=5pt,
         breaklines=true,
+	showspaces=false,
+	showstringspaces=false,
+	tabsize=4,
+	extendedchars=true,
+	xleftmargin=0.05\textwidth,
+	xrightmargin=0.05\textwidth
 }
 
 \begin{document}
@@ -27,6 +35,8 @@
 \tableofcontents
 \clearpage
 
-\section{Chapter 1 - A Tutorial Introduction}
-\lstinputlisting[language=C]{../src/ex1_01/main.c}
+\input{content}
+
+\input{refs}
+
 \end{document}
