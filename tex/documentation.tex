@@ -10,6 +10,35 @@
 \usepackage{color}
 \usepackage{cite}
 \usepackage{apacite}
+\usepackage{fancyhdr}
+
+% page settings
+\pagestyle{fancy}
+\fancyhf{}
+
+\addtolength{\textwidth}{5cm}
+\addtolength{\evensidemargin}{-25mm}
+\addtolength{\oddsidemargin}{-25mm}
+
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+
+\addtolength{\headwidth}{5cm}
+\addtolength{\headheight}{1cm}
+\addtolength{\textheight}{2.5cm}
+\addtolength{\voffset}{-2.5cm}
+
+\renewcommand{\headrulewidth}{0.4pt}
+
+\fancyhead[L]{\textbf{K\&R Exercises}}
+\fancyhead[C]{}
+\fancyhead[R]{Ervin Mazlagi\'c}
+
+\fancyfoot[L]{}
+\fancyfoot[C]{\today}
+\fancyfoot[R]{\thepage}
+
+\renewcommand{\footrulewidth}{0.4pt}
+
 
 \author{Ervin Mazlagi\'c}
 \date{\today}
@@ -31,16 +60,16 @@
 }
 
 \begin{document}
-\maketitle
-\vfill{}
-\input{abstract}
-\vfill{}
-\clearpage
-\tableofcontents
-\clearpage
+	\maketitle
+	\vfill{}
+	\input{abstract}
+	\vfill{}
+	\clearpage
+	
+	\tableofcontents
+	\clearpage
 
-\input{content}
-
-\input{refs}
+	\input{content}
+	\input{refs}
 
 \end{document}
