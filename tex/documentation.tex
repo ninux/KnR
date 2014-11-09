@@ -31,12 +31,13 @@
 
 \fancyhead[L]{\textbf{K\&R Exercises}}
 \fancyhead[C]{}
-\fancyhead[R]{Ervin Mazlagi\'c}
+\fancyhead[R]{\rightmark}
 
-\fancyfoot[L]{}
+\fancyfoot[L]{Ervin Mazlagi\'c}
 \fancyfoot[C]{\today}
 \fancyfoot[R]{\thepage}
 
+\renewcommand{\headrulewidth}{2.0pt}
 \renewcommand{\footrulewidth}{0.4pt}
 
 
@@ -58,6 +59,19 @@
 	xleftmargin=0.05\textwidth,
 	xrightmargin=0.05\textwidth
 }
+
+\renewenvironment{abstract}
+{
+	\small
+	\begin{center}
+		\bfseries \abstractname\vspace{-.5em}\vspace{0pt}
+	\end{center}
+	\list{}{%
+		\setlength{\leftmargin}{0.2\textwidth}%
+		\setlength{\rightmargin}{\leftmargin}%
+	}%
+\item\relax}
+{\endlist}
 
 \begin{document}
 	\maketitle
