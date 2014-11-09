@@ -1,3 +1,14 @@
+# LaTeX
+*.pdf
+*.aux
+*.log
+*.toc
+*.bbl
+*.blg
+
+# vim
+*.swp
+
 # Object files
 *.o
 *.ko

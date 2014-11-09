@@ -1,0 +1,32 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{lipsum}
+\usepackage{listings}
+\usepackage{color}
+
+\author{Ervin Mazlagi\'c}
+\date{\today}
+\title{K\&R - Exercise Solutions}
+
+\lstset{
+	language=C,
+	basicstyle=\ttfamily,
+	numbers=left,
+        numberstyle=\tiny,
+        numbersep=5pt,
+        breaklines=true,
+}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\clearpage
+
+\section{Chapter 1 - A Tutorial Introduction}
+\lstinputlisting[language=C]{../src/ex1_01/main.c}
+\end{document}
