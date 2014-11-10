@@ -1,0 +1,51 @@
+\newpage
+\section{Make}
+	Make is a very powerful and yet easy to use tool for
+	processing compilation. Here is a minimalistic tutorial 
+	with two simple examples for common usecases like in this
+	project.
+	\subsection{Variables}
+		In a Makefile you can define variables, such as
+		for the compiler options. As usual we're going to
+		use a appropriate variable name like 
+		\lstinline{CFLAGS}. Such a variable can be 
+		assigned like this
+		\lstinline{CFLAGS = -Wall -Wextra -Wpedantic}.
+
+		To use such a variable you can just set it between
+		braces with a prefix dollar symbol like this
+		\lstinline{$(FLAGS)}. %$
+
+		This kind of variable can be used for a lot of
+		different things like object or library paths
+		like \lstinline{OBJECT_PATH = obj/}.
+
+	\subsection{Targets}
+		Targets are used to divide a Makefile into different
+		sections that can be run separately. A target is
+		defined like a label in assemly, that is a string
+		at line beginning ended with a colon like 
+		\lstinline{all:}. To run a specific section you can 
+		give it as parameter to make. For the above exmple
+		this would be \lstinline{make all}.
+
+	\subsection{Phony targets}
+		A phony target is used for sequences that don't
+		produce a file. This is useful for clean-up 
+		preocedures. Therefore a common phony target is
+		\lstinline{clean}. To define such a phony target
+		you can do so with these two steps: First, declare
+		a target as phony with \lstinline{.PHONY: clean}.
+
+	\newpage
+	\subsection{Examples}
+		\subsubsection{Compiling C code with GCC}
+			\lstinputlisting[language=make]{../skel/Makefile}
+	
+		\subsubsection{Building LaTeX projects}
+			This example shows how you can use loops in a
+			Makefile, which is actually just a bash command.
+			This is typically useful for LaTeX documents,
+			since it needs up to 3 iterations due to the
+			indexing
+			\lstinputlisting[language=make]{../tex/Makefile}
