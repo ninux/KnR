@@ -7,9 +7,7 @@ main()
 	int wc;
 	int i;
 	int n;
-	int last;		/* indicate last written character	*/
-				/* -1 for non-alphabetical		*/
-				/* +1 for alphabetical			*/
+	int last;	/* indicate last written character */
 
 	wc = 0;
 	lengths[wc] = 0;
@@ -24,10 +22,11 @@ main()
 			}
 			lengths[wc]++;
 		} else {
-			last = -1;
+			last = -1;	/* set indicator for non-letters */
 		}
 	}
 
+	/* print the histogramm */
 	printf("word\tletters\thist\n");
 	for (i = 0; i <= wc; i++) {
 		printf("%2i\t%2i\t", i, lengths[i]);
