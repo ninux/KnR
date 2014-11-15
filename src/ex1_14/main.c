@@ -25,10 +25,16 @@ main()
 	}
 
 	/* print the statistics */
+	printf("printing letter statistics\n");
 	for (i = 0; i <= alphasize; i++) {
 		printf("%c: ", i+'A');
 
+
 		for (n = 0; n < letters[i]; n++) {
+			if (n == 0) {
+				printf("|");
+			}
+
 			if ((n+1) == letters[i]) {
 				printf(">");
 			} else {
