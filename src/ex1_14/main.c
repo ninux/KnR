@@ -15,27 +15,29 @@ main()
 
 	/* get the data out of the stream */
 	while ((c = getchar()) != EOF) {
-		if (((c >= 'A') && (c <= 'Z'))) {	/* uppercase letter */
+		if (((c >= 'A') && (c <= 'Z'))) {	/* uppercase */
 			letters[c-'A']++;
-		} else if ((c >= 'a') && (c <= 'z')) {	/* lowercase letter */
-			letters[c-'a']++;
+		} else if ((c >= 'a') && (c <= 'z')) {	/* lowercase */
+			letters[c-'a']++;	/* lowercase = uppercase */
 		} else {
 			/* non-letter -> no operation */
 		}
 	}
 
-	/* print the statistics */
-	printf("printing letter statistics\n");
+	/* print the statistics scale */
+	printf("\t0         10        20        30        40\n");
+	printf("\t|    5    |    15   |    25   |    35   |\n");
+	printf("________|____|____|____|____|____|____|____|____|___\n");
+	printf("\t|\n");
 	for (i = 0; i <= alphasize; i++) {
-		printf("%c: ", i+'A');
+		printf("%c %3d\t", i+'A', letters[i]);
 
-
-		for (n = 0; n < letters[i]; n++) {
+		for (n = 0; n <= letters[i]; n++) {
 			if (n == 0) {
 				printf("|");
 			}
 
-			if ((n+1) == letters[i]) {
+			if ((n) == letters[i]) {
 				printf(">");
 			} else {
 				printf("-");
@@ -44,4 +46,5 @@ main()
 
 		printf("\n");
 	}
+	printf("________|___________________________________________\n");
 }
